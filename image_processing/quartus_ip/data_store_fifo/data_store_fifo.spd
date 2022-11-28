@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<simPackage>
+ <file
+   path="fifo_180/sim/data_store_fifo_fifo_180_iwhtsca.v"
+   type="VERILOG"
+   library="fifo_180" />
+ <file
+   path="sim/data_store_fifo.v"
+   type="VERILOG"
+   library="data_store_fifo"
+   hasInlineConfiguration="true" />
+ <topLevel name="data_store_fifo.data_store_fifo" />
+ <deviceFamily name="cyclone10gx" />
+</simPackage>

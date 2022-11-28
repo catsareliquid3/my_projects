@@ -1,0 +1,35 @@
+alias com_all {
+	dev_com
+	com
+}
+
+alias s {
+	eval write format wave -window .main_pane.wave.interior.cs.body.pw.wf $WAVE_NAME
+	eval echo Wave was saved to file : $WAVE_NAME
+}
+
+
+
+	global TB_PATH
+	global FPGA_LIB
+	global WAVE_NAME
+	global WORK_HOME
+	global TOP_NAME
+	global elabcommand
+	
+	eval vlog -sv -O0 -compat +incdir+$SV_LIB +incdir+$TB_PATH/src $TB_PATH/src/$TOP_NAME.sv
+
+	eval vsim -suppress 3009 -classdebug -hazards -msgmode both -displaymsgmode both -t ps -L image_processing $TOP_NAME
+	#eval vsim -novopt -runinit -classdebug -msgmode both -displaymsgmode both -t ps -L work -L work_lib -L altera_ver -L lpm_ver -L sgate_ver -L altera_mf_ver -L altera_lnsim_ver -L cyclone10gx_ver -L cyclone10gx_hssi_ver -L cyclone10gx_hip_ver -L altera -L lpm -L sgate -L altera_mf -L altera_lnsim -L cyclone10gx -L cyclone10gx_hssi -L cyclone10gx_hip -L fifo_180 -Lf data_store_fifo -L for_sim -L $LIB_NAME $TOP_NAME 
+	eval vsim -novopt -runinit -classdebug -msgmode both -displaymsgmode both -t ps -L work -L work_lib -L altera_ver -L lpm_ver -L sgate_ver -L altera_mf_ver -L altera_lnsim_ver -L cyclone10gx_ver -L cyclone10gx_hssi_ver -L cyclone10gx_hip_ver -L altera -L lpm -L sgate -L altera_mf -L altera_lnsim -L cyclone10gx -L cyclone10gx_hssi -L cyclone10gx_hip -L fifo_180 -Lf data_store_fifo -L lpm_divide_180 -Lf div_ip -L lpm_mult_180 -Lf mult_ip -L for_sim -L $LIB_NAME $TOP_NAME 
+
+alias r {
+	do $WAVE_NAME
+	run -all
+}
+	
+
+
+
+
+

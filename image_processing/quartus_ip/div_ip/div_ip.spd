@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<simPackage>
+ <file
+   path="lpm_divide_180/sim/div_ip_lpm_divide_180_v254ida.v"
+   type="VERILOG"
+   library="lpm_divide_180" />
+ <file
+   path="sim/div_ip.v"
+   type="VERILOG"
+   library="div_ip"
+   hasInlineConfiguration="true" />
+ <topLevel name="div_ip.div_ip" />
+ <deviceFamily name="cyclone10gx" />
+</simPackage>

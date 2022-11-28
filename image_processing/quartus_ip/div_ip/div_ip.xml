@@ -1,0 +1,114 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<deploy
+ date="2022.11.23.10:55:44"
+ outputDirectory="D:/Pluzhnik/quartus_projects/image_processing/div_ip/">
+ <perimeter>
+  <parameter
+     name="AUTO_GENERATION_ID"
+     type="Integer"
+     defaultValue="0"
+     onHdl="0"
+     affectsHdl="1" />
+  <parameter
+     name="AUTO_UNIQUE_ID"
+     type="String"
+     defaultValue=""
+     onHdl="0"
+     affectsHdl="1" />
+  <parameter
+     name="AUTO_DEVICE_FAMILY"
+     type="String"
+     defaultValue="Cyclone 10 GX"
+     onHdl="0"
+     affectsHdl="1" />
+  <parameter
+     name="AUTO_DEVICE"
+     type="String"
+     defaultValue="10CX220YF780I5G"
+     onHdl="0"
+     affectsHdl="1" />
+  <parameter
+     name="AUTO_DEVICE_SPEEDGRADE"
+     type="String"
+     defaultValue="5"
+     onHdl="0"
+     affectsHdl="1" />
+  <interface name="lpm_divide_input" kind="conduit" start="0">
+   <property name="associatedClock" value="" />
+   <property name="associatedReset" value="" />
+   <property name="prSafe" value="false" />
+   <port name="numer" direction="input" role="numer" width="16" />
+   <port name="denom" direction="input" role="denom" width="8" />
+   <port name="clock" direction="input" role="clock" width="1" />
+   <port name="aclr" direction="input" role="aclr" width="1" />
+  </interface>
+  <interface name="lpm_divide_output" kind="conduit" start="0">
+   <property name="associatedClock" value="" />
+   <property name="associatedReset" value="" />
+   <property name="prSafe" value="false" />
+   <port name="quotient" direction="output" role="quotient" width="16" />
+   <port name="remain" direction="output" role="remain" width="8" />
+  </interface>
+ </perimeter>
+ <entity kind="div_ip" version="1.0" name="div_ip">
+  <parameter name="AUTO_GENERATION_ID" value="0" />
+  <parameter name="AUTO_DEVICE" value="10CX220YF780I5G" />
+  <parameter name="AUTO_DEVICE_FAMILY" value="Cyclone 10 GX" />
+  <parameter name="AUTO_UNIQUE_ID" value="" />
+  <parameter name="AUTO_DEVICE_SPEEDGRADE" value="5" />
+  <generatedFiles>
+   <file
+       path="D:\Pluzhnik\quartus_projects\image_processing\div_ip\synth\div_ip.v"
+       attributes="CONTAINS_INLINE_CONFIGURATION" />
+  </generatedFiles>
+  <childGeneratedFiles>
+   <file
+       path="D:\Pluzhnik\quartus_projects\image_processing\div_ip\synth\div_ip.v"
+       attributes="CONTAINS_INLINE_CONFIGURATION" />
+  </childGeneratedFiles>
+  <sourceFiles>
+   <file path="D:/Pluzhnik/quartus_projects/image_processing/div_ip.ip" />
+  </sourceFiles>
+  <childSourceFiles>
+   <file
+       path="C:/intelfpga_pro/18.0/ip/altera/megafunctions/lpm_divide/lpm_divide_hw.tcl" />
+  </childSourceFiles>
+  <messages>
+   <message level="Info" culprit="div_ip">"Generating: div_ip"</message>
+   <message level="Info" culprit="div_ip">"Generating: div_ip_lpm_divide_180_v254ida"</message>
+   <message level="Info" culprit="lpm_divide_0">Generating top-level entity div_ip_lpm_divide_180_v254ida.</message>
+  </messages>
+ </entity>
+ <entity kind="lpm_divide" version="18.0" name="div_ip_lpm_divide_180_v254ida">
+  <parameter name="GUI_MAXIMIZE_SPEED" value="Speed" />
+  <parameter name="GUI_LPM_dREPRESENTATION" value="Unsigned" />
+  <parameter name="GUI_LPM_REMAINDERPOSITIVE" value="Yes" />
+  <parameter name="DEVICE_FAMILY" value="Cyclone 10 GX" />
+  <parameter name="GUI_LPM_WIDTHd" value="8" />
+  <parameter name="GUI_LPM_nREPRESENTATION" value="Unsigned" />
+  <parameter name="GUI_LPM_PIPELINE" value="6" />
+  <parameter name="GUI_USE_CLKEN" value="false" />
+  <parameter name="GUI_LPM_WIDTHn" value="16" />
+  <parameter name="GUI_USE_ACLR" value="true" />
+  <generatedFiles>
+   <file
+       path="D:\Pluzhnik\quartus_projects\image_processing\div_ip\lpm_divide_180\synth\div_ip_lpm_divide_180_v254ida.v"
+       attributes="" />
+  </generatedFiles>
+  <childGeneratedFiles>
+   <file
+       path="D:\Pluzhnik\quartus_projects\image_processing\div_ip\lpm_divide_180\synth\div_ip_lpm_divide_180_v254ida.v"
+       attributes="" />
+  </childGeneratedFiles>
+  <sourceFiles>
+   <file
+       path="C:/intelfpga_pro/18.0/ip/altera/megafunctions/lpm_divide/lpm_divide_hw.tcl" />
+  </sourceFiles>
+  <childSourceFiles/>
+  <instantiator instantiator="div_ip" as="lpm_divide_0" />
+  <messages>
+   <message level="Info" culprit="div_ip">"Generating: div_ip_lpm_divide_180_v254ida"</message>
+   <message level="Info" culprit="lpm_divide_0">Generating top-level entity div_ip_lpm_divide_180_v254ida.</message>
+  </messages>
+ </entity>
+</deploy>

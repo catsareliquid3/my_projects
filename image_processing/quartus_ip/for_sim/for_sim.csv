@@ -1,0 +1,19 @@
+# system info for_sim on 2022.11.23.10:58:52
+system_info:
+name,value
+DEVICE,10CX220YF780I5G
+DEVICE_FAMILY,Cyclone 10 GX
+GENERATION_ID,0
+#
+#
+# Files generated for for_sim on 2022.11.23.10:58:52
+files:
+filepath,kind,attributes,module,is_top
+sim/for_sim.v,VERILOG,CONTAINS_INLINE_CONFIGURATION,for_sim,true
+#
+# Map from instance-path to kind of module
+instances:
+instancePath,module
+for_sim.fifo_0,data_store_fifo
+for_sim.lpm_divide_0,div_ip
+for_sim.lpm_mult_0,mult_ip

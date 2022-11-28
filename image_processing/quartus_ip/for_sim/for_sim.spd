@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<simPackage>
+ <file
+   path="sim/for_sim.v"
+   type="VERILOG"
+   library="for_sim"
+   hasInlineConfiguration="true" />
+ <topLevel name="for_sim.for_sim" />
+ <deviceFamily name="cyclone10gx" />
+</simPackage>

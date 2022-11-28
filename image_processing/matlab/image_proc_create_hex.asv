@@ -1,0 +1,40 @@
+clc
+close all
+clear
+b=imread('peppers_gif.gif');
+
+% a=im2uint8(b);
+b1= b';
+ c=reshape(b,1,262144);
+ c1=reshape(b,262144,1);
+ fid = fopen('peppers.hex', 'wt');
+ fprintf(fid, '%x\n', c);
+ disp('Text file write done');disp(' ');
+ fclose(fid);
+ 
+
+ 
+ n=imread('peppers_bmp.bmp');
+kernel = [1,1,1;1,1,1;1,1,1];
+f = uint8(conv2(b,kernel)/9);
+
+
+formatSpec = '%x';
+fileID = fopen('result_arr.hex','r');
+u = fscanf(fileID,formatSpec);
+fclose(fileID);
+j=reshape(u,511,511);
+imwrite(j,'peppers_fpga','png');
+h=cast(j,'uint8');
+h1 = h.';
+
+
+
+%figure('Name','test','NumberTitle','off');imshow(h); 
+ 
+ 
+%  
+%   figure('Name','orig_gif','NumberTitle','off');imshow(b);
+%   figure('Name','processed in matlab','NumberTitle','off');imshow(f);
+%   figure('Name','processed in fpga','NumberTitle','off');imshow(h);
+%   figure('Name','orig_bmp','NumberTitle','off');imshow(n);

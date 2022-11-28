@@ -1,0 +1,27 @@
+	component for_sim is
+		port (
+			fifo_0_fifo_input_datain                : in  std_logic_vector(7 downto 0)  := (others => 'X'); -- datain
+			fifo_0_fifo_input_wrreq                 : in  std_logic                     := 'X';             -- wrreq
+			fifo_0_fifo_input_rdreq                 : in  std_logic                     := 'X';             -- rdreq
+			fifo_0_fifo_input_clk                   : in  std_logic                     := 'X';             -- clk
+			fifo_0_fifo_input_sclr                  : in  std_logic                     := 'X';             -- sclr
+			fifo_0_fifo_output_dataout              : out std_logic_vector(7 downto 0);                     -- dataout
+			fifo_0_fifo_output_usedw                : out std_logic_vector(10 downto 0);                    -- usedw
+			fifo_0_fifo_output_full                 : out std_logic;                                        -- full
+			fifo_0_fifo_output_empty                : out std_logic;                                        -- empty
+			fifo_0_fifo_output_almost_full          : out std_logic;                                        -- almost_full
+			fifo_0_fifo_output_almost_empty         : out std_logic;                                        -- almost_empty
+			lpm_divide_0_lpm_divide_input_numer     : in  std_logic_vector(15 downto 0) := (others => 'X'); -- numer
+			lpm_divide_0_lpm_divide_input_denom     : in  std_logic_vector(7 downto 0)  := (others => 'X'); -- denom
+			lpm_divide_0_lpm_divide_input_clock     : in  std_logic                     := 'X';             -- clock
+			lpm_divide_0_lpm_divide_input_aclr      : in  std_logic                     := 'X';             -- aclr
+			lpm_divide_0_lpm_divide_output_quotient : out std_logic_vector(15 downto 0);                    -- quotient
+			lpm_divide_0_lpm_divide_output_remain   : out std_logic_vector(7 downto 0);                     -- remain
+			lpm_mult_0_mult_input_dataa             : in  std_logic_vector(7 downto 0)  := (others => 'X'); -- dataa
+			lpm_mult_0_mult_input_datab             : in  std_logic_vector(7 downto 0)  := (others => 'X'); -- datab
+			lpm_mult_0_mult_input_clock             : in  std_logic                     := 'X';             -- clock
+			lpm_mult_0_mult_input_aclr              : in  std_logic                     := 'X';             -- aclr
+			lpm_mult_0_mult_output_result           : out std_logic_vector(15 downto 0)                     -- result
+		);
+	end component for_sim;
+

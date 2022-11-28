@@ -1,0 +1,18 @@
+# system info data_store_fifo on 2022.11.23.10:56:36
+system_info:
+name,value
+DEVICE,10CX220YF780I5G
+DEVICE_FAMILY,Cyclone 10 GX
+GENERATION_ID,0
+#
+#
+# Files generated for data_store_fifo on 2022.11.23.10:56:36
+files:
+filepath,kind,attributes,module,is_top
+sim/data_store_fifo.v,VERILOG,CONTAINS_INLINE_CONFIGURATION,data_store_fifo,true
+fifo_180/sim/data_store_fifo_fifo_180_iwhtsca.v,VERILOG,,data_store_fifo_fifo_180_iwhtsca,false
+#
+# Map from instance-path to kind of module
+instances:
+instancePath,module
+data_store_fifo.fifo_0,data_store_fifo_fifo_180_iwhtsca

@@ -1,0 +1,18 @@
+# system info div_ip on 2022.11.23.10:55:26
+system_info:
+name,value
+DEVICE,10CX220YF780I5G
+DEVICE_FAMILY,Cyclone 10 GX
+GENERATION_ID,0
+#
+#
+# Files generated for div_ip on 2022.11.23.10:55:26
+files:
+filepath,kind,attributes,module,is_top
+sim/div_ip.v,VERILOG,CONTAINS_INLINE_CONFIGURATION,div_ip,true
+lpm_divide_180/sim/div_ip_lpm_divide_180_v254ida.v,VERILOG,,div_ip_lpm_divide_180_v254ida,false
+#
+# Map from instance-path to kind of module
+instances:
+instancePath,module
+div_ip.lpm_divide_0,div_ip_lpm_divide_180_v254ida
