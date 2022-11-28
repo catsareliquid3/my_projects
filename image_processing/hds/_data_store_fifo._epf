@@ -1,0 +1,2 @@
+DEFAULT_ARCHITECTURE atom data_store_fifo
+DEFAULT_FILE atom data_store_fifo_bb.v

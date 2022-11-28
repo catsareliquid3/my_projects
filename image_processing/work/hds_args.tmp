@@ -1,0 +1,1 @@
+ -do D:/FPGA_LIB/image_processing/work/run_work -L image_processing -l transcript.txt -i -t ns -sdfnowarn -multisource_delay latest +typdelays image_processing.image_processing_top

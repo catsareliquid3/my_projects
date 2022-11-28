@@ -1,0 +1,2 @@
+DEFAULT_ARCHITECTURE atom line_buf
+DEFAULT_FILE atom line_buf.v

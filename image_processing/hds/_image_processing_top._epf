@@ -1,0 +1,3 @@
+DEFAULT_ARCHITECTURE atom image_processing_top
+DEFAULT_FILE atom image_processing_top/struct.bd
+TOP_MARKER atom 1

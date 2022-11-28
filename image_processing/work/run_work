@@ -1,0 +1,32 @@
+set FPGA_LIB D:/FPGA_LIB
+set SV_LIB D:/SV_LIB
+set PROJECT_LIB D:/Pluzhnik/quartus_projects
+set LIB_NAME image_processing
+set WORK_HOME $FPGA_LIB/$LIB_NAME/work
+set TOP_NAME tb_top
+
+# === Set this to your wave ===
+set WAVE_NAME "$WORK_HOME/wave.do"
+
+
+set WORK_HOME "$FPGA_LIB/$LIB_NAME/work"
+set TB_PATH "$PROJECT_LIB/image_processing/verification"
+
+# === Set the path to msim_setup.tcl in your project ===
+
+set MSIM_SETUP_PATH "D:/Pluzhnik/quartus_projects/image_processing/for_sim/sim/mentor"
+
+
+
+
+# =!!!= DO NOT CHANGE ANY OF STRING BELOW =!!!=
+
+set QSYS_SIMDIR "$MSIM_SETUP_PATH/.."
+do $MSIM_SETUP_PATH/msim_setup.tcl
+
+set elabcommand " -t ps $ELAB_OPTIONS $USER_DEFINED_ELAB_OPTIONS"
+foreach library $logical_libraries { append elabcommand " -L $library" }
+
+
+do $TB_PATH/run
+
